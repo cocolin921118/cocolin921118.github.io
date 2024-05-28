@@ -11,37 +11,24 @@
             left: 0;
             width: 50px;
             height: 50px;
-            background: #f00;
             animation-name: oxxo;
-            animation-duration: 2s;
+            animation-duration: 3s;
             animation-iteration-count: infinite;
+
+
         }
 
+
         @keyframes oxxo {
-
-            0%{
-                top:0px ;
-                left:0px ;
+            from {
+                left: 0;
+                transform: rotate(0deg);
             }
-
-            25%{
-                top:0px ;
-                left:100px ;
-            }
-
-            50%{
-                top:100px ;
-                left:100px ;
-            }
-
-            75%{
-                top:100px ;
-                left:0px ;
-            }
-
-            100%{
-                top:0px ;
-                left:0px ;
+            to {
+                left: 1500px;
+                transform: rotate(360deg);
+                width: 300px;
+                height: 50px;
             }
 
         }</style>
@@ -51,7 +38,13 @@
 
 <div>
 
-    aa
+    <img src="img/cry_cat.png" height="202" width="202"/>
+    <img src="img/cry_cat.png" height="202" width="202"/>
+    <img src="img/cry_cat.png" height="202" width="202"/>
+    <img src="img/cry_cat.png" height="202" width="202"/>
+
+
+
 
 </div>
 
