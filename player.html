@@ -9,7 +9,7 @@
         div {
             position: absolute;
             left: 0;
-            width: 200px;
+            width: 50px;
             height: 50px;
             background: #f00;
             animation-name: oxxo;
@@ -18,15 +18,30 @@
         }
 
         @keyframes oxxo {
-            from {
-                left: 0;
-                background: #0dcaf0;
+
+            0%{
+                top:0px ;
+                left:0px ;
             }
-            to {
-                left: 500px;
-                background: #efe002;
-                width: 300px;
-                height: 100px;
+
+            25%{
+                top:0px ;
+                left:100px ;
+            }
+
+            50%{
+                top:100px ;
+                left:100px ;
+            }
+
+            75%{
+                top:100px ;
+                left:0px ;
+            }
+
+            100%{
+                top:0px ;
+                left:0px ;
             }
 
         }</style>
