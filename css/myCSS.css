@@ -21,14 +21,7 @@ h1 {
 
 }
 
-@keyframes floatImg {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
+
 
 h1::before {
     position: absolute;
@@ -59,9 +52,44 @@ h1::before {
     border: 3px dashed #000;
 
     position: relative;
+    animation-name: Zoomin_Zoomout;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
 
-    animation: floatImg 3s ease-in-out infinite;
+@keyframes Zoomin_Zoomout {
 
+    0% {
+        transform: scale(1)
+    }
+
+   50% {
+        transform: scale(1.01)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.bg img:hover {
+   top: 10px;
+
+    position: relative;
+    animation-name: spine;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spine {
+
+    100% {
+        transform: translateX(0) rotate(360deg);
+
+
+    }
 }
 
 
