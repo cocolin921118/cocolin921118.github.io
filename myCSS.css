@@ -1,0 +1,173 @@
+body {
+    background-color: #fff3ee;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+
+}
+
+
+
+
+h1 {
+    position: relative;
+    padding: 0.5em;
+    background: #a4aefb;
+    color: #000000;
+}
+
+
+h1::before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px rgb(149, 158, 155);
+}
+
+
+.bg {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #000c4212;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    padding: 30px 45px;
+
+
+
+
+    img {
+
+
+        background-color: burlywood;
+        padding: 15px 20px;
+        border: 3px dashed #000;
+    }
+
+
+    h2 {
+        border-top: solid #1e366a 2px; /*上のボーダー*/
+        font-size: 25px;
+
+
+    }
+
+
+}
+
+
+.list-1 {
+
+
+    background: #f1f8ff;
+    box-shadow: 0px 0px 0px 10px #f1f8ff; /*線の外側*/
+    border: dashed 2px #668ad8; /*破線*/
+    border-radius: 9px;
+    margin-left: 10px; /*はみ出ないように調整*/
+    margin-right: 10px; /*はみ出ないように調整*/
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+
+
+.list-1 {
+
+
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
+
+.list-2 {
+
+
+
+
+    background: #ffeedc;
+    box-shadow: 0px 0px 0px 10px #ffeedc; /*線の外側*/
+    border: dashed 2px #ff952b; /*破線*/
+    border-radius: 9px;
+    margin-left: 10px; /*はみ出ないように調整*/
+    margin-right: 10px; /*はみ出ないように調整*/
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+
+
+.list-2 {
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
+
+
+
+ol {
+    counter-reset: number; /*数字をリセット*/
+    list-style-type: none !important; /*数字を一旦消す*/
+    padding: 0.3em 0.8em;
+    border: solid 2px #1e9e12;
+}
+
+
+ol li {
+    border-bottom: dashed 1px #1e9e12;
+    position: relative;
+    padding: 0.5em 0.5em 0.5em 30px;
+    line-height: 1.5em;
+}
+
+
+ol li:before {
+    /* 以下数字をつける */
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    /*数字のデザイン変える*/
+    display: inline-block;
+    background: #1e9e12;
+    color: white;
+    font-family: 'Avenir', 'Arial Black', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    /*以下 上下中央寄せのため*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+ol li:last-of-type {
+    border-bottom: none; /*最後のliの線だけ消す*/
+}
+
+
+li {
+    font-size: 18px;
+
+
+}
+
+
+.last {
+
+
+    border-bottom: solid #1e366a 2px; /*上のボーダー*/
+    padding-bottom: 20px;
+}
+
+
+
+
+
