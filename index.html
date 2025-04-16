@@ -11,61 +11,8 @@
 
 </head>
 <body>
-<div id="button">按我進入網站</div>
+<div id="button" onclick="location.href='html/recipe/recipe.html'">按我進入網站</div>
 
-<script>
-    const btn = document.getElementById('button');
-
-    // 螢幕與按鈕尺寸
-    const btnWidth = 150;
-    const btnHeight = 150;
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-
-    // 初始隨機位置
-    let posX = Math.random() * (screenWidth - btnWidth);
-    let posY = Math.random() * (screenHeight - btnHeight);
-
-    // 初始隨機速度（加快速度）
-    let x = (Math.random() * 6 + 1) * (Math.random() < 0.5 ? 1 : -1);
-    let y = (Math.random() * 6 + 1) * (Math.random() < 0.5 ? 1 : -1);
-
-    // 變色用隨機色生成器
-    function randomColor() {
-        const r = Math.floor(Math.random() * 200 + 30);
-        const g = Math.floor(Math.random() * 200 + 30);
-        const b = Math.floor(Math.random() * 200 + 30);
-        return `rgb(${r}, ${g}, ${b})`;
-    }
-
-    // 一開始就換個顏色
-    btn.style.backgroundColor = randomColor();
-
-    const move = () => {
-        posX += x;
-        posY += y;
-
-        if (posX + btnWidth >= screenWidth || posX <= 0) {
-            x *= -1;
-            btn.style.backgroundColor = randomColor();
-        }
-
-        if (posY + btnHeight >= screenHeight || posY <= 0) {
-            y *= -1;
-            btn.style.backgroundColor = randomColor();
-        }
-
-        btn.style.left = posX + 'px';
-        btn.style.top = posY + 'px';
-
-        requestAnimationFrame(move);
-    };
-
-    move();
-
-    btn.onclick = () => {
-        window.location.href = "html/recipe/recipe.html"; // 換成你的食譜頁面
-    };
 
  
 </script>

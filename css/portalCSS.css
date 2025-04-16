@@ -12,6 +12,8 @@
         font-style: normal;
     }
 
+
+
     #button {
         position: absolute;
         width: 150px;
@@ -24,16 +26,26 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        colorChange 10s linear infinite;
+        animation: bounceX 5s linear infinite alternate,
+        bounceY 7s linear infinite alternate,
+        colorChange 10s linear infinite ;
     }
 
+    @keyframes bounceX {
+        0% { left: 0; }
+        100% { left: calc(100% - 150px); }
+    }
 
+    @keyframes bounceY {
+        0% { top: 0; }
+        100% { top: calc(100% - 150px); }
+    }
 
     @keyframes colorChange {
         0% { background-color: rgb(255, 100, 150); }
+        25% { background-color: rgb(100, 200, 255); }
         50% { background-color: rgb(100, 255, 100); }
         75% { background-color: rgb(255, 255, 100); }
         100% { background-color: rgb(255, 100, 150); }
     }
-
 
