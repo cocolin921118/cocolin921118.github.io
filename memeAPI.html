@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <title>隨機 Meme 瀏覽器</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/memeAPI.css">
+</head>
+<body>
+<h1>Here's your random meme</h1>
+<div id="meme-container">
+    <img id="meme-img" src="" alt="Loading meme..." />
+    <div class="info" id="meme-info"></div>
+</div>
+<button onclick="loadMeme()">再來一張</button>
+
+<script>
+    async function loadMeme() {
+        const res = await fetch('https://meme-api.com/gimme');
+        const data = await res.json();
+        document.getElementById('meme-img').src = data.url;
+        document.getElementById('meme-info').textContent = `Title: ${data.title} | Subreddit: r/${data.subreddit}`;
+    }
+
+    // 初次載入
+    loadMeme();
+</script>
+</body>
+</html>

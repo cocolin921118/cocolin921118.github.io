@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+    color: #33ff33;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 18px;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+.terminal {
+    white-space: pre-wrap;
+    max-width: 800px;
+}
+
+/* 發光 + 保留下劃線 */
+.glow {
+    color: #33ff33;
+    text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: underline; /* 保留底線 */
+}
+
+/* 閃爍效果 */
+@keyframes blinkAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blinkAnimation 1s infinite;
+}
